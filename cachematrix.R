@@ -41,3 +41,28 @@ cacheSolve <- function(x, ...) {
   x$setinverse(inverse_matrix)                             #It will set the value of the inverse matrix in cache
   return(inverse_matrix)
 }
+
+
+#OUTPUT: 
+# > matrix2 <- matrix(1:4, 2, 2)
+# > matrix2
+# [,1] [,2]
+# [1,]    1    3
+# [2,]    2    4
+# > matrix_cache <- makeCacheMatrix(matrix2)
+# > matrix_cache$get()
+# [,1] [,2]
+# [1,]    1    3
+# [2,]    2    4
+# > matrix_cache$getinverse()
+# NULL
+# > cacheSolve(matrix_cache)
+# [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5
+# > cacheSolve(matrix_cache)
+# Getting cached inverse matrix
+# [,1] [,2]
+# [1,]   -2  1.5
+# [2,]    1 -0.5
+# >
